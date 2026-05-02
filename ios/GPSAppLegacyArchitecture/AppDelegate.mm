@@ -1,11 +1,13 @@
 #import "AppDelegate.h"
-
+#import <GoogleMaps/GoogleMaps.h>
 #import <React/RCTBundleURLProvider.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  // Add this line with your actual iOS API Key
+  [GMSServices provideAPIKey:@"Google-Map-Api-Key"];
   self.moduleName = @"GPSAppLegacyArchitecture";
   // You can add your custom initial props in the dictionary below.
   // They will be passed down to the ViewController used by React Native.
